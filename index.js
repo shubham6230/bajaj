@@ -14,6 +14,11 @@ app.get('/',(req, res) => {
     })
 })
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.warn(`App listening on http://localhost:${PORT}`);
+});
+
 app.post("/bfhl", (req, res) => {
     console.log(req.body.data)
     let arra = req.body.data
