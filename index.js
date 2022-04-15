@@ -8,10 +8,11 @@ app.listen(port, () => {
     console.log(`App running on ${port}, http://localhost:${port}`)
 })
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.warn(`App listening on http://localhost:${PORT}`);
-});
+app.get('/',(req, res) => {
+    res.status(200).json({
+        "status": "working"
+    })
+})
 
 app.post("/bfhl", (req, res) => {
     console.log(req.body.data)
@@ -19,8 +20,8 @@ app.post("/bfhl", (req, res) => {
     let num = [];
     let alphabet =[];
     // Change the user id as per user name and DOB
-    let user_id = 'Shubham_Goyal_10072001'
-    let email=`shubhamgoyalit19@acropolis.in`
+    let user_id = 'shubham_goyal_10072001'
+    let email=`shubhamgoyal6230@gmail.com`
     let rollNo = `0827IT191113`
     // Check whether the given array contains numeric elements or not
     let stat=false
