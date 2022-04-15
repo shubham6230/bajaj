@@ -8,6 +8,11 @@ app.listen(port, () => {
     console.log(`App running on ${port}, http://localhost:${port}`)
 })
 
+app.get('/',(req, res) => {
+    res.status(200).json({
+        "status": "working"
+    })
+})
 
 
 app.post("/bfhl", (req, res) => {
