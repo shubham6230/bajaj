@@ -14,7 +14,6 @@ app.get('/',(req, res) => {
     })
 })
 
-
 app.post("/bfhl", (req, res) => {
     console.log(req.body.data)
     let arra = req.body.data
